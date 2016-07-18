@@ -9,10 +9,14 @@
 rootPath="CHANGE THIS"
 Dir.glob("#{rootPath}/*.csv") do |input_file|
   puts "working on: #{input_file}..."
-  output_file = "#{input_file}_new.csv"
-  File.open(output_file, "w") do |ofile|
-    File.foreach(input_file) do |iline|
-      ofile.puts(iline) if iline =~ /EQ/ or iline =~ /SERIES/
+  bname = File.basename(input_file)
+  output_file = "#{rootPath}/filtered/#{bname}"
+  if not File.exists?(output_file)
+    File.open(output_file, "w") do |ofile|
+      File.foreach(input_file) do |iline|
+        ofile.puts(iline) if iline =~ /EQ/ or iline =~ /SERIES/
+      end
     end
   end
 end
+
