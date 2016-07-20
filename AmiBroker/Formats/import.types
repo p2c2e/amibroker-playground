@@ -20,4 +20,4 @@ Short Daily CSV (*.csv)|*.csv|daily.format
 MST Format w/Ticker (*.mst)|*.mst|mst.format
 StockWatch.com format (*.csv)|*.csv|stockwatch.format
 TenBagger format (*.stk)|*.stk|stk.format
-GetBhavCopy format (*.csv)|*.csv|GetBhavCopy.format
+BhavCopy format (*.csv)|*.csv|BhavCopy.format
